@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: abbas-rz/abbas-rz.github.io
+  branch: master  # Set to master if you're deploying via GitHub Pages
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "posts"
+    label: "Blog"
+    folder: "content/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+
